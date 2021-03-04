@@ -1176,7 +1176,7 @@ class BaseBoard:
         for rank_index in range(7, -1, -1):
             if borders:
                 builder.append("  ")
-                builder.append("-" * 17)
+                builder.append("-" * 34)
                 builder.append("\n")
 
                 builder.append(RANK_NAMES[rank_index])
@@ -1186,7 +1186,7 @@ class BaseBoard:
                 square_index = square(file_index, rank_index)
 
                 if borders:
-                    builder.append("|")
+                    builder.append(" | ")
                 elif file_index > 0:
                     builder.append(" ")
 
@@ -1198,16 +1198,16 @@ class BaseBoard:
                     builder.append(empty_square)
 
             if borders:
-                builder.append("|")
+                builder.append(" | ")
 
             if borders or rank_index > 0:
                 builder.append("\n")
 
         if borders:
             builder.append("  ")
-            builder.append("-" * 17)
+            builder.append("-" * 34)
             builder.append("\n")
-            builder.append("   a b c d e f g h")
+            builder.append("     a   b   c   d   e   f   g   h")
 
         return "".join(builder)
 
